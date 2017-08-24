@@ -4,11 +4,12 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import App from './pages/app';
 import Test from './pages/test';
 
-const routes = 
+const routes = (
     <BrowserRouter>
         <App>
             <Route path="/test" component={Test} />
         </App>
     </BrowserRouter>
+);
 
 export default routes;
