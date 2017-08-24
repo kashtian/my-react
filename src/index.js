@@ -1,23 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { AppContainer } from 'react-hot-loader';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import App from './pages/app';
+import Test from './pages/test';
 
-const render = Component => {
+const render = () => {
     ReactDOM.render(
-        <AppContainer>
-            <Component />
-        </AppContainer>,
+        <BrowserRouter>
+            <App>
+                <Route path="/test" component={Test} />
+            </App>
+        </BrowserRouter>,
     document.getElementById('app'));
 }
 
-render(App);
+render();
 
 if (module.hot) {
-    console.log('is hot replace');
-    module.hot.accept('./pages/app', () => {
-        render(App)
+    module.hot.accept(() => {
+        render()
     })
 }
 

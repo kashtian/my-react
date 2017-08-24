@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import { Link } from 'react-router-dom';
 
 class App extends Component {
     render() {
-        return <div>test</div>
+        return <div>
+            App2
+            <ul>
+                <li><Link to="/test">test link</Link></li>
+            </ul>
+            {this.props.children}
+        </div>
     }
 }
 

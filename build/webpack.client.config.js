@@ -5,7 +5,6 @@ const HTMLPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 if (process.argv.includes('--development')) {
-    baseConfig.entry.app.unshift('react-hot-loader/patch');
     baseConfig.entry.app.push('webpack-hot-middleware/client');
     baseConfig.output.filename = '[name].js';
 } 

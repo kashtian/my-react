@@ -5,7 +5,8 @@ module.exports = {
         app: ['./src/index.js'],
         vendor: [
             'react',
-            'react-dom'
+            'react-dom',
+            'react-router-dom'
         ]
     },
 
