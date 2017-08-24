@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class App extends Component {
     render() {
         return <div>
-            App2
+            App
             <ul>
                 <li><Link to="/test">test link</Link></li>
             </ul>
